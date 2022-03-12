@@ -1,3 +1,4 @@
+/* eslint-env node */
 module.exports = {
     trailingComma: 'es5',
     tabWidth: 4,
@@ -8,4 +9,5 @@ module.exports = {
     endOfLine: 'auto',
     bracketSpacing: true,
     arrowParens: 'always',
+    plugins: [require('prettier-plugin-tailwindcss')],
 }

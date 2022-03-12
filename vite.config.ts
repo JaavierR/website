@@ -1,4 +1,4 @@
-import { fileURLToPath, URL } from 'url'
+import { URL, fileURLToPath } from 'url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -18,15 +18,13 @@ export default defineConfig({
 
         // https://github.com/antfu/unplugin-auto-import
         AutoImport({
-            imports: ['vue', 'vue-router'],
+            imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
             dts: 'src/auto-imports.d.ts',
         }),
 
         // https://github.com/antfu/unplugin-vue-components
         Components({
-            // allow auto load markdown components under `./src/components/`
             extensions: ['vue', 'md'],
-            // allow auto import and register components used in markdown
             include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
             dts: 'src/components.d.ts',
         }),

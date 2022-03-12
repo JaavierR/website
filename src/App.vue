@@ -1,4 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const test = ref('')
+const test2 = computed(() => {
+    return 'file'
+})
+useHead({
+    title: 'This is a test',
+})
+</script>
 
 <template>
     <header>

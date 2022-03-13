@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    CardRepository: typeof import('./components/CardRepository.vue')['default']
     SkeletonLoader: typeof import('./components/SkeletonLoader.vue')['default']
     SkeletonLoaderRepository: typeof import('./components/SkeletonLoaderRepository.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']

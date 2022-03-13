@@ -9,4 +9,9 @@ export default [
         name: 'about',
         component: () => import('@/views/AboutView.vue'),
     },
+    {
+        path: '/me/repos',
+        name: 'Repos',
+        component: () => import('@/views/Repos.vue'),
+    },
 ]

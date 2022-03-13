@@ -1,15 +1,11 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import { createHead } from '@vueuse/head'
+import { ViteSSG } from 'vite-ssg'
 
 import App from '@/App.vue'
-import router from '@/router'
+import routes from '@/router'
 import '@/index.css'
 
-const app = createApp(App)
-
-app.use(createPinia())
-app.use(createHead())
-app.use(router)
-
-app.mount('#app')
+export const createApp = ViteSSG(App, routes, (ctx) => {
+    Object.values(import.meta.globEager('./modules/*.ts')).forEach((i) =>
+        i.install?.(ctx)
+    )
+})

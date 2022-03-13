@@ -30,6 +30,11 @@ export default defineConfig({
         }),
     ],
 
+    ssgOptions: {
+        script: 'async',
+        formatting: 'minify',
+    },
+
     optimizeDeps: {
         include: ['vue', 'vue-router'],
     },

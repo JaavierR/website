@@ -10,7 +10,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-if="brandName('Javascript')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M.17.17V23.83H23.83V.17ZM12.85,18.55A3.1,3.1,0,0,1,9.51,22a3.44,3.44,0,0,1-3.33-2L8,18.85c.35.62.61,1.14,1.38,1.14s1.15-.28,1.15-1.4V11.15h2.33Zm5.24,3.37A4.25,4.25,0,0,1,14,19.71l1.82-1.05A2.37,2.37,0,0,0,18.05,20c.92,0,1.46-.4,1.46-1s-.56-1-1.57-1.48l-.56-.24c-1.6-.68-2.67-1.54-2.67-3.35S16,11,18,11a3.24,3.24,0,0,1,3.16,1.73L19.4,13.8a1.51,1.51,0,0,0-1.43-1,1,1,0,0,0-1.07,1c0,.66.41.93,1.37,1.35l.55.23c1.89.82,3,1.64,3,3.5s-1.57,3-3.69,3Z"
@@ -21,7 +21,7 @@ const brandName = (val: string): boolean =>
     <!-- TypeScript -->
     <svg
         v-else-if="brandName('TypeScript')"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -36,7 +36,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('Vue.js')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M12,6.72,9.38,2.18H5.64l6.36,11,6.36-11H14.62Z"
@@ -52,7 +52,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('Nuxt.js')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M10.66,5.16a1.68,1.68,0,0,0-2.89,0l-7,12a1.66,1.66,0,0,0,1.44,2.49H7.68a1.6,1.6,0,0,1-.34-2l5.3-9.08Z"
@@ -69,7 +69,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('HTML5')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M2.29.67l1.76,20.4L12,23.33l8-2.27L21.71.67ZM17.87,7.35H8.56l.2,2.58h8.91L17,17.59,12,19,7,17.59l-.35-3.92H9.11l.17,2,2.72.75,2.7-.76L15,12.4H6.54L5.9,4.84H18.08Z"
@@ -80,7 +80,7 @@ const brandName = (val: string): boolean =>
     <!-- Tailwind CSS -->
     <svg
         v-else-if="brandName('Tailwind CSS')"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
@@ -97,7 +97,7 @@ const brandName = (val: string): boolean =>
                 y1="-6.689"
                 x2="23.333"
                 y2="31.089"
-                gradientUnits="userSpaceOnUse"
+                gradient-units="userSpaceOnUse"
             >
                 <stop stop-color="#2383AE" />
                 <stop offset="1" stop-color="#6DD7B9" />
@@ -109,7 +109,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('PHP')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <defs>
             <clipPath id="a">
@@ -123,8 +123,8 @@ const brandName = (val: string): boolean =>
                 cx="-292.82"
                 cy="408.3"
                 r="0.03"
-                gradientTransform="matrix(453.82, 0, 0, -453.82, 132894.45, 185304.26)"
-                gradientUnits="userSpaceOnUse"
+                gradient-transform="matrix(453.82, 0, 0, -453.82, 132894.45, 185304.26)"
+                gradient-units="userSpaceOnUse"
             >
                 <stop offset="0" stop-color="#aeb2d5" />
                 <stop offset="0.3" stop-color="#aeb2d5" />
@@ -182,7 +182,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('Python')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M14.8.52a17.47,17.47,0,0,0-5.64,0C6.78.94,6.35,1.81,6.35,3.43V5.55H12v.71H4.23A3.51,3.51,0,0,0,.71,9.1a10.31,10.31,0,0,0,0,5.67c.4,1.66,1.35,2.84,3,2.84H5.64V15.06a3.57,3.57,0,0,1,3.52-3.48H14.8a2.83,2.83,0,0,0,2.82-2.84V3.43A3.13,3.13,0,0,0,14.8.52Zm-6,3.62A1.07,1.07,0,1,1,9.87,3.07,1.07,1.07,0,0,1,8.81,4.14Z"
@@ -198,7 +198,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('MySQL')"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
     >
         <path
             d="M16.13,5.92a.93.93,0,0,0-.26,0h0a2.56,2.56,0,0,0,.2.26l.15.3h0a.37.37,0,0,0,.13-.32s0-.08-.08-.13-.11-.09-.16-.14"
@@ -241,7 +241,7 @@ const brandName = (val: string): boolean =>
     <svg
         v-else-if="brandName('Laravel')"
         role="img"
-        viewBox="0 0 24 24"
+        view-box="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
     >
         <title>Laravel</title>

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core'
 import {
     Listbox,
     ListboxButton,
@@ -7,45 +6,34 @@ import {
     ListboxOption,
     ListboxOptions,
 } from '@headlessui/vue'
-import SunIcon from '@/components/SunIcon.vue'
-import MoonIcon from '@/components/MoonIcon.vue'
-import PcIcon from '@/components/PcIcon.vue'
 
-const colorMode = useColorMode()
-let localColor = null
+// Composables
+import useTheme from '@/composables/use-theme'
 
-if (!import.meta.env.SSR) {
-    localColor = localStorage.getItem('vueuse-color-scheme')
-}
-const currentTheme = ref(localColor || 'auto')
+// Components
+import IconSun from '@/components/IconSun.vue'
+import IconMoon from '@/components/IconMoon.vue'
+import IconPc from '@/components/IconPc.vue'
+
+const { currentTheme } = useTheme()
 
 const settings = [
     {
         value: 'light',
         label: 'Light',
-        icon: SunIcon,
+        icon: IconSun,
     },
     {
         value: 'dark',
         label: 'Dark',
-        icon: MoonIcon,
+        icon: IconMoon,
     },
     {
         value: 'auto',
         label: 'System',
-        icon: PcIcon,
+        icon: IconPc,
     },
 ]
-
-watchEffect(() => {
-    if (currentTheme.value === 'light') {
-        colorMode.value = 'light'
-    } else if (currentTheme.value === 'dark') {
-        colorMode.value = 'dark'
-    } else if (currentTheme.value === 'auto') {
-        colorMode.value = 'auto'
-    }
-})
 </script>
 
 <template>
@@ -53,10 +41,10 @@ watchEffect(() => {
         <ListboxLabel class="sr-only">Theme</ListboxLabel>
         <ListboxButton type="button">
             <span class="dark:hidden">
-                <SunIcon class="h-6 w-6" :selected="currentTheme !== 'auto'" />
+                <IconSun class="h-6 w-6" :selected="currentTheme !== 'auto'" />
             </span>
             <span class="hidden dark:inline">
-                <MoonIcon class="h-6 w-6" :selected="currentTheme !== 'auto'" />
+                <IconMoon class="h-6 w-6" :selected="currentTheme !== 'auto'" />
             </span>
         </ListboxButton>
         <ListboxOptions

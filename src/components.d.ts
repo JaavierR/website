@@ -15,6 +15,7 @@ declare module 'vue' {
     SkeletonLoader: typeof import('./components/SkeletonLoader.vue')['default']
     SkeletonLoaderRepository: typeof import('./components/SkeletonLoaderRepository.vue')['default']
     SunIcon: typeof import('./components/SunIcon.vue')['default']
+    Table: typeof import('./components/Table.vue')['default']
     ThemeToggle: typeof import('./components/ThemeToggle.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']
   }

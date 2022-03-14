@@ -7,7 +7,7 @@
                 <span>JR</span>
 
                 <div class="flex items-center space-x-2">
-                    <button>CR</button>
+                    <ThemeToggle />
                 </div>
             </div>
         </div>

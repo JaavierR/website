@@ -7,8 +7,14 @@ declare module 'vue' {
     CardRepository: typeof import('./components/CardRepository.vue')['default']
     CardSkill: typeof import('./components/CardSkill.vue')['default']
     IconTech: typeof import('./components/IconTech.vue')['default']
+    MoonIcon: typeof import('./components/MoonIcon.vue')['default']
+    'MoonIcon copy': typeof import('./components/MoonIcon copy.vue')['default']
+    PcIcon: typeof import('./components/PcIcon.vue')['default']
     SkeletonLoader: typeof import('./components/SkeletonLoader.vue')['default']
     SkeletonLoaderRepository: typeof import('./components/SkeletonLoaderRepository.vue')['default']
+    SunIcon: typeof import('./components/SunIcon.vue')['default']
+    'SunIcon copy': typeof import('./components/SunIcon copy.vue')['default']
+    ThemeToggle: typeof import('./components/ThemeToggle.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']
   }
 }

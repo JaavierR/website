@@ -12,7 +12,12 @@ import MoonIcon from '@/components/MoonIcon.vue'
 import PcIcon from '@/components/PcIcon.vue'
 
 const colorMode = useColorMode()
-const currentTheme = ref(localStorage.getItem('vueuse-color-scheme') || 'auto')
+let localColor = null
+
+if (!import.meta.env.SSR) {
+    localColor = localStorage.getItem('vueuse-color-scheme')
+}
+const currentTheme = ref(localColor || 'auto')
 
 const settings = [
     {

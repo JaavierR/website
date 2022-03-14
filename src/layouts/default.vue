@@ -10,6 +10,8 @@
 
         <RouterView class="container mx-auto mb-auto w-11/12 sm:w-9/12" />
 
+        <TheFooter />
+
         <div
             class="h-0.5 w-full bg-gradient-to-r from-transparent via-cyan-500 dark:via-neutral-500"
         />

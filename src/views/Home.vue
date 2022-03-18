@@ -31,19 +31,27 @@ const skills = [
 </script>
 
 <template>
-    <div class="space-y-14">
-        <header class="my-16 px-4">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Perspiciatis eligendi ipsum eveniet, eum asperiores ut
-                voluptates eos nesciunt, labore similique esse necessitatibus
-                aspernatur numquam commodi ab id earum, repellendus natus?
-            </p>
-            <div class="mb-4 rounded-full md:mb-0">
+    <div class="my-10 space-y-14">
+        <header
+            class="my-16 flex w-full flex-col-reverse justify-between px-4 md:flex-row md:items-center"
+        >
+            <div class="w-full space-y-2 md:w-8/12">
+                <div class="text-xl font-semibold dark:text-white md:text-3xl">
+                    <h2>Self taught</h2>
+                    <h2>Full-stack web developer and ML enthusiast</h2>
+                </div>
+                <p class="text-gray-500 dark:text-neutral-400">
+                    Hi there, my name is Javier. I'm a passionate of technology,
+                    I like build complex web sites and try new things relaed to
+                    Artificial Intelligence and Data Science, and currently I'm
+                    also teaching at the University of Santiago of Chile.
+                </p>
+            </div>
+            <div class="mb-4 w-40 rounded-full md:mb-0">
                 <img
                     :src="profile?.avatar_url"
                     alt="javier profile image"
-                    class="h-30 w-30 rounded-full md:h-40 md:w-40"
+                    class="h-40 w-40 rounded-full"
                 />
             </div>
         </header>

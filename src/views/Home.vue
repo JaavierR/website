@@ -7,11 +7,13 @@ useHead({
 })
 
 const profile = ref<Owner | null>(null)
+const loaded = ref<boolean>(false)
 
 const fetchGithub = async () => {
     const response = (await axios.get('https://api.github.com/users/JaavierR'))
         .data
     profile.value = response
+    loaded.value = true
 }
 
 fetchGithub()
@@ -47,11 +49,20 @@ const skills = [
                     also teaching at the University of Santiago of Chile.
                 </p>
             </div>
-            <div class="mb-4 w-40 rounded-full md:mb-0">
+            <div
+                class="mb-4 h-40 w-40 rounded-full md:mb-0"
+                :class="{
+                    'animate-pulse bg-gray-100 bg-no-repeat dark:bg-neutral-700':
+                        !loaded,
+                }"
+            >
                 <img
+                    v-if="profile?.avatar_url"
+                    async
                     :src="profile?.avatar_url"
-                    alt="javier profile image"
-                    class="h-40 w-40 rounded-full"
+                    :alt="loaded ? 'javier profile image' : ''"
+                    class="h-40 w-40 rounded-full object-cover"
+                    loading="lazy"
                 />
             </div>
         </header>

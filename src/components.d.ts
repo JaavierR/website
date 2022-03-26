@@ -6,6 +6,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CardRepository: typeof import('./components/CardRepository.vue')['default']
     CardSkill: typeof import('./components/CardSkill.vue')['default']
+    IconGithub: typeof import('./components/IconGithub.vue')['default']
     IconMoon: typeof import('./components/IconMoon.vue')['default']
     IconPc: typeof import('./components/IconPc.vue')['default']
     IconSun: typeof import('./components/IconSun.vue')['default']

@@ -2,8 +2,9 @@
 // We suggest you to commit this file into source control
 // Read more: https://github.com/vuejs/vue-next/pull/3399
 
-declare module 'vue' {
+declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CardExperience: typeof import('./components/CardExperience.vue')['default']
     CardRepository: typeof import('./components/CardRepository.vue')['default']
     CardSkill: typeof import('./components/CardSkill.vue')['default']
     IconGithub: typeof import('./components/IconGithub.vue')['default']
@@ -11,6 +12,8 @@ declare module 'vue' {
     IconPc: typeof import('./components/IconPc.vue')['default']
     IconSun: typeof import('./components/IconSun.vue')['default']
     IconTech: typeof import('./components/IconTech.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
     SkeletonLoader: typeof import('./components/SkeletonLoader.vue')['default']
     SkeletonLoaderRepository: typeof import('./components/SkeletonLoaderRepository.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']

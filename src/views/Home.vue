@@ -30,6 +30,40 @@ const skills = [
     'HTML5',
     'Tailwind CSS',
 ]
+
+const experiences = {
+    education: [
+        {
+            title: 'Industrial Engineer',
+            position: 'Universidad de Santiago de Chile',
+            date: '2015 - 2020',
+            url: 'https://admision.usach.cl/carreras/ingenieria-civil-industrial/',
+        },
+        {
+            title: 'Bachelor of Science and Humanities',
+            position: 'Universidad de Santiago de Chile',
+            date: '2013 - 2015',
+            url: 'https://admision.usach.cl/carreras/bachillerato-en-ciencias-y-humanidades/',
+        },
+    ],
+    jobs: [
+        {
+            title: 'Teacher',
+            position: 'Universidad de Santiago de Chile',
+            date: '2021 - Present',
+        },
+        {
+            title: 'Full-stack Developer',
+            position: 'Developen technology',
+            date: '2020 - Present',
+        },
+        {
+            title: 'Intern',
+            position: 'IBM - Chile',
+            date: '2019 - 2019',
+        },
+    ],
+}
 </script>
 
 <template>
@@ -66,6 +100,47 @@ const skills = [
                 />
             </div>
         </header>
+
+        <section
+            id="experiences"
+            class="mt-4 grid gap-6 sm:mt-6 md:mt-10 md:grid-cols-2 md:gap-8"
+        >
+            <div>
+                <h3
+                    class="px-4 text-lg font-medium uppercase text-gray-400 dark:text-violet-400"
+                >
+                    Jobs
+                </h3>
+
+                <div class="mt-4 grid gap-2">
+                    <CardExperience
+                        v-for="(exp, idx) in experiences.jobs"
+                        :key="`education-${idx}`"
+                        :title="exp.title"
+                        :date="exp.date"
+                        :position="exp.position"
+                    />
+                </div>
+            </div>
+            <div>
+                <h3
+                    class="px-4 text-lg font-medium uppercase text-gray-400 dark:text-violet-400"
+                >
+                    Education
+                </h3>
+
+                <div class="mt-4 grid gap-2">
+                    <CardExperience
+                        v-for="(exp, idx) in experiences.education"
+                        :key="`education-${idx}`"
+                        :title="exp.title"
+                        :url="exp.url"
+                        :date="exp.date"
+                        :position="exp.position"
+                    />
+                </div>
+            </div>
+        </section>
 
         <section id="technologies" class="mt-6">
             <h3

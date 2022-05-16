@@ -3,7 +3,7 @@
         class="flex h-screen flex-col justify-between bg-gray-50 dark:bg-neutral-900"
     >
         <div
-            class="h-0.5 w-full bg-gradient-to-r from-transparent via-violet-500 dark:via-neutral-500"
+            class="min-h-[0.125rem] w-full bg-gradient-to-r from-transparent via-violet-500 dark:via-neutral-500"
         />
 
         <TheNavbar class="pt-4" />
@@ -13,7 +13,7 @@
         <TheFooter />
 
         <div
-            class="h-0.5 w-full bg-gradient-to-r from-transparent via-violet-500 dark:via-neutral-500"
+            class="min-h-[0.125rem] w-full bg-gradient-to-r from-transparent via-violet-500 dark:via-neutral-500"
         />
     </div>
 </template>
